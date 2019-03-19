@@ -20,5 +20,8 @@
   "CARD": {
     "DELETE": "Delete",
     "ESTIMATED_HOURS": "Estimated hours"
-  }
+  },
+  "In progress": "In progress",
+  "Completed": "Completed",
+  "Planned": "Planned"
 }
