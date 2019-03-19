@@ -1,0 +1,24 @@
+{
+  "APP": {
+    "WELCOME": "Administrador de tareas"
+  },
+  "LANDING": {
+    "DAY_STATUS": "Estado del día",
+    "TOTAL_PLANNED": "Total tareas planificadas",
+    "TOTAL_IN_PROGRESS": "Total tareas en progreso",
+    "TOTAL_COMPLETED": "Total tareas completadas",
+    "CREATE_TASK": "Crear nueva tarea",
+    "HOURS": "horas"
+  },
+  "CREATE_CARD": {
+    "NAME": "Nombre",
+    "DESCRIPTION": "Descripción",
+    "ESTIMATE": "Estimativo (horas)",
+    "ADD": "Agregar",
+    "CANCEL": "Cancelar"
+  },
+  "CARD": {
+    "DELETE": "Borrar",
+    "ESTIMATED_HOURS": "Horas estimadas"
+  }
+}

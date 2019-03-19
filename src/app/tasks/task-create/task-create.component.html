@@ -1,0 +1,22 @@
+<form class="task-card">
+  <div class="form-group">
+    <div class="edit-card">
+      <div class="fields-container">
+        <mat-form-field>
+          <input matInput placeholder="{{'CREATE_CARD.NAME' | translate}}" required [(ngModel)]="data.name" name="name">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="{{'CREATE_CARD.DESCRIPTION' | translate}}" [(ngModel)]="data.description" name="description">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="{{'CREATE_CARD.ESTIMATE' | translate}}" required type="number" [(ngModel)]="data.estimate"
+            name="estimate">
+        </mat-form-field>
+      </div>
+      <div class="buttons-container">
+        <button mat-button (click)="onAddClick()" [disabled]="isFormInvalid" color="primary" type="submit" class="add-button button"> {{ 'CREATE_CARD.ADD' | translate }} </button>
+        <button mat-button (click)="onCancelClick()" color="warn" class="cancel-button button"> {{ 'CREATE_CARD.CANCEL' | translate }} </button>
+      </div>
+    </div>
+  </div>
+</form>

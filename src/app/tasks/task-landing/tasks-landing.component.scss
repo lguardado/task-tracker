@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+
+.create-task-btn {
+  margin: 20px;
+}
+.counter {
+  font-weight: $font-weight-bold;
+}
+.line-through {
+  text-decoration: line-through;
+  font-weight: $font-weight-regular;
+  color: $green-color;
+}

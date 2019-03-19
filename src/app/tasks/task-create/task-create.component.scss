@@ -1,0 +1,20 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables";
+
+.task-card {
+  padding: 20px;
+  margin: 10px;
+  .fields-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+    .buttons-container {
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      .button {
+        margin: 8px;
+      }
+  }
+}

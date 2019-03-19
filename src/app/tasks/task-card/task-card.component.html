@@ -1,0 +1,17 @@
+<mat-card class="task-card">
+  <mat-card-header class="card-header">
+    <mat-card-title>{{ data.name }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <mat-card-subtitle>{{ data.description }}</mat-card-subtitle>
+      <mat-card-subtitle> {{ 'CARD.ESTIMATED_HOURS' | translate }} {{ data.estimate }}</mat-card-subtitle>
+  </mat-card-content>
+  <mat-select [(value)]="currentState">
+    <mat-option (click)="onStateClick(option)" *ngFor="let option of statusDropdownOptions" [value]="option">
+      {{states[option]}}
+    </mat-option>
+  </mat-select>
+  <mat-card-actions>
+    <button mat-button color="warn" class="delete-button" (click)="onDeleteClick(data)">{{ 'CARD.DELETE' | translate }}</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,15 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables";
+
+.task-card {
+  padding: 20px;
+  margin: 10px;
+  .delete-button {
+    padding: 10px;
+  }
+  .card-header {
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+}

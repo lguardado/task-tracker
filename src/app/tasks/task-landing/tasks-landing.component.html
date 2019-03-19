@@ -1,0 +1,23 @@
+<div class="date-status">
+  <h4>{{'LANDING.DAY_STATUS' | translate }}</h4>
+  <div class="counter" [class.line-through]="!counters.totalPlanned">{{ 'LANDING.TOTAL_PLANNED' | translate }}: {{ counters.totalPlanned }} {{ 'LANDING.HOURS' | translate }}</div>
+  <div class="counter" [class.line-through]="!counters.totalInProgress">{{ 'LANDING.TOTAL_IN_PROGRESS' | translate }}: {{ counters.totalInProgress }} {{ 'LANDING.HOURS' | translate }}</div>
+  <div class="counter" [class.line-through]="!counters.totalCompleted">{{ 'LANDING.TOTAL_COMPLETED' | translate }}: {{ counters.totalCompleted }} {{ 'LANDING.HOURS' | translate }}</div>
+</div>
+<div class="task-list">
+  <app-task-create 
+    *ngIf="isCreatingTask"
+    [data]="newTask" 
+    (addedEmitter)="onHandleCreatedEvent($event)"
+    (cancelEditEmitter)="this.isCreatingTask = false">
+  </app-task-create>
+  <button mat-button color="primary" class="create-task-btn" 
+    *ngIf="!isCreatingTask"
+    (click)="onCreateNewTaskClick()"
+    >{{ 'LANDING.CREATE_TASK' | translate }}</button>
+  <app-task-card *ngFor="let task of tasks" 
+    [data]="task" 
+    (deletedEmitter)="onHandleDeleteEvent($event)"
+    (stateChangeEmitter)="updateTotals()">
+  </app-task-card>
+</div>

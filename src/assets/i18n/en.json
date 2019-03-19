@@ -1,0 +1,24 @@
+{
+  "APP": {
+    "WELCOME": "Task manager"
+  },
+  "LANDING": {
+    "DAY_STATUS": "Day Status",
+    "TOTAL_PLANNED": "Total tasks planed",
+    "TOTAL_IN_PROGRESS": "Total tasks in progress",
+    "TOTAL_COMPLETED": "Total tasks completed",
+    "CREATE_TASK": "Create new task",
+    "HOURS": "hours"
+  },
+  "CREATE_CARD": {
+    "NAME": "Name",
+    "DESCRIPTION": "Description",
+    "ESTIMATE": "Estimate (hours)",
+    "ADD": "Add",
+    "CANCEL": "Cancel"
+  },
+  "CARD": {
+    "DELETE": "Delete",
+    "ESTIMATED_HOURS": "Estimated hours"
+  }
+}
