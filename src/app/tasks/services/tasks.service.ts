@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import MockTasks from '../mock/tasks.mock';
-import { Task, StatesEnum, Counters } from '../models/task.model';
+import { Task } from '../models/task.model';
+import { Counters } from '../models/counter.model';
+import { StatesEnum } from '../enums/state.enum';
 
 @Injectable()
 export class TasksService {

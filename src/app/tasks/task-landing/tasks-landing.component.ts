@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Task, StatesEnum, Counters } from '../models/task.model';
+import { Task } from '../models/task.model';
 import { TasksService } from '../services/tasks.service';
+import { Counters } from '../models/counter.model';
+import { StatesEnum } from '../enums/state.enum';
 
 @Component({
   selector: 'app-tasks-landing',

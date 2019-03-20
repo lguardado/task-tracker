@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Task } from '../models/task.model';
-import { StatesEnum } from '../models/task.model';
-
+import { StatesEnum } from '../enums/state.enum';
 @Component({
   selector: 'app-task-create',
   templateUrl: './task-create.component.html',
