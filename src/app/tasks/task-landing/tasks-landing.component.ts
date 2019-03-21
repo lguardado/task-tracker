@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Task } from '../models/task.model';
 import { TasksService } from '../services/tasks.service';
 import { Counters } from '../models/counter.model';
-import { StatesEnum } from '../enums/state.enum';
 
 @Component({
   selector: 'app-tasks-landing',
@@ -27,7 +26,7 @@ export class TasksLandingComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.initializeCounters();
     this.getTasks();
-    this.states = this.getStatesKeys();
+    this.states = this._tasksService.getStatesArray();
   }
 
   onHandleDeleteEvent(event) {
@@ -75,10 +74,6 @@ export class TasksLandingComponent implements OnInit, OnDestroy {
     } else {
       return 0;
     }
-  }
-
-  getStatesKeys() {
-    return Object.keys(StatesEnum);
   }
 
   onCreateNewTaskClick() {

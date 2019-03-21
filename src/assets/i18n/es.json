@@ -21,7 +21,7 @@
     "DELETE": "Borrar",
     "ESTIMATED_HOURS": "Horas estimadas"
   },
-  "In progress": "En progreso",
-  "Completed": "Completada",
-  "Planned": "Planificada"
+  "IN_PROGRESS": "En progreso",
+  "COMPLETED": "Completada",
+  "PLANNED": "Planificada"
 }

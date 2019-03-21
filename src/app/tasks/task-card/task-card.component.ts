@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Task } from '../models/task.model';
-import { StatesEnum } from '../enums/state.enum';
+import { TasksService } from '../services/tasks.service';
 @Component({
   selector: 'app-task-card',
   templateUrl: './task-card.component.html',
@@ -13,13 +13,12 @@ export class TaskCardComponent implements OnInit {
   @Output() cancelEditEmitter: EventEmitter<void> = new EventEmitter<void>();
   @Output() stateChangeEmitter: EventEmitter<void> = new EventEmitter<void>();
   currentState: String;
-  states = StatesEnum;
   statusDropdownOptions: any;
 
-  constructor() {}
+  constructor(private _tasksService: TasksService) {}
 
   ngOnInit() {
-    this.statusDropdownOptions = this.getStatusDropdownOptions();
+    this.statusDropdownOptions = this._tasksService.getStatesArray();
     this.updateCurrentState(this.data.state);
   }
 
@@ -38,10 +37,6 @@ export class TaskCardComponent implements OnInit {
 
   onCancelClick() {
     this.cancelEditEmitter.emit();
-  }
-
-  getStatusDropdownOptions() {
-    return Object.keys(StatesEnum);
   }
 
   updateCurrentState(state: string) {

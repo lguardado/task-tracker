@@ -3,7 +3,7 @@ import { Observable, Subject } from 'rxjs';
 import MockTasks from '../mock/tasks.mock';
 import { Task } from '../models/task.model';
 import { Counters } from '../models/counter.model';
-import { StatesEnum } from '../enums/state.enum';
+import { StatesEnum } from '../enums/states.enum';
 
 @Injectable()
 export class TasksService {
@@ -75,5 +75,10 @@ export class TasksService {
       totalInProgress: 0,
       totalPlanned: 0
     };
+  }
+
+  getStatesArray() {
+    const options = Object.keys(StatesEnum);
+    return options.slice(options.length / 2);
   }
 }

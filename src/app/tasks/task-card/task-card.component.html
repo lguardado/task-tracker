@@ -8,7 +8,7 @@
   </mat-card-content>
   <mat-select [(value)]="currentState">
     <mat-option (click)="onStateClick(option)" *ngFor="let option of statusDropdownOptions" [value]="option">
-      {{states[option] | translate}}
+      {{ option | translate}}
     </mat-option>
   </mat-select>
   <mat-card-actions>
